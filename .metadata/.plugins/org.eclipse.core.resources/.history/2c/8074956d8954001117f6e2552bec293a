@@ -1,0 +1,22 @@
+package java21;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class ListarArquvosPasta {
+
+	public static void main(String[] args) {
+
+		Path pasta = Path.of(".");
+
+		try {
+
+			Files.list(pasta).forEach(System.out::println);
+
+		} catch (IOException e) {
+			System.out.println("Erro: " + e.getMessage());
+		}
+	}
+
+}

@@ -1,0 +1,30 @@
+package java8;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+
+public class EscreverArquivoJava8 {
+
+	public static void main(String[] args) {
+		
+		try{
+			BufferedWriter bw = new BufferedWriter(new FileWriter("/home/cesar/arquivo.txt"));
+			
+			bw.write("Aprendendo o java 8"); 
+			bw.newLine();
+			bw.write("Manipulando arquivos");
+			bw.newLine();
+			bw.write("Adicionando uma Nova Linha");
+			
+			bw.close();
+			
+			System.out.println("Arquivo Escrito!");
+			
+		}
+		catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
+
+}
